@@ -10,7 +10,10 @@ ADD SAI/rpc/thrift-0.11.0.tar.gz /
 ADD SAI/rpc/saithrift-0.9.tar.gz /
 
 # Install the python libraries
+RUN pwd
 RUN cd /saithrift-0.9
+RUN ls -ltra
+RUN pwd
 RUN python3 setup.py install
 RUN cd /
 RUN rm -rf saithrift-0.9
